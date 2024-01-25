@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { RiLoader4Fill } from "react-icons/ri";
 import { TbHandClick } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
 
 const validateRegister = (values) => {
   const errors = {};
@@ -201,6 +202,13 @@ const Registration = () => {
           <button type="submit" className="bg-red-400 w-full h-10 rounded-md my-2 text-white flex items-center justify-center">
             Register <RiLoader4Fill className="text-xl mx-1 animate-spin" />
           </button>
+
+          <h4 className="flex justify-center" >
+            Don't have an account{" "}
+            <NavLink to="/login"  className="text-blue-700 flex items-center mx-2 cursor-pointer underline">
+              click<TbHandClick />
+            </NavLink>
+          </h4>
         </Form>
 
       )}

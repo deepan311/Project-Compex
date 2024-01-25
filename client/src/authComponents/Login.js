@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { RiLoader4Fill } from "react-icons/ri";
 import { TbHandClick } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
 
 const validate = (values) => {
   const errors = {};
@@ -67,9 +68,9 @@ const Login = () => {
 
           <h4 className="flex justify-center">
             Don't have an account{" "}
-            <span className="text-blue-700 flex items-center mx-2 cursor-pointer underline">
+            <NavLink to="/register" className="text-blue-700 flex items-center mx-2 cursor-pointer underline">
               click<TbHandClick />
-            </span>
+            </NavLink>
           </h4>
           {/* <h4 className="text-sm font-thin mt-8 ">Empowering students through collaboration, resources, community engagement online. Cultivating a supportive online environment for shared learning, growth, and success.</h4> */}
 
